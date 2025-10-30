@@ -1,0 +1,415 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+html {
+    scroll-behavior: smooth;
+}
+p{
+    color: rgb(85, 85, 85);
+}
+/*tramsition*/
+a,
+.btn{
+    transition: all 300ms ease;
+}
+/*desktop-nav*/
+#desktop-nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+nav,
+.nav-links{
+    display: flex;
+
+}
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+.nav-links{
+    gap: 5rem;
+    list-style: none;
+    font-size: 1.25rem;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color:white ;
+}
+a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
+}
+
+/* SECTIONS */
+
+section {
+    padding-top: 100px;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+  }
+  
+  .section-container {
+    display: flex;
+  }
+  
+  /* PROFILE SECTION */
+  
+  #profile {
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    margin-bottom: 3%;
+  }
+  
+.pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  margin-left:-10px ;
+  margin-right: 80px;
+  overflow: hidden; /* 超出部分隱藏 */
+  border-radius: 10px; /* 可選，讓邊緣更美觀 */
+}
+
+.pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 等比例放大並裁切超出部分 */
+  object-position: center; /* 置中顯示 */
+  display: block;
+}
+  .profiletext {
+    align-self: center;
+    text-align: left;
+  }
+  .profiletext h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+  }
+  .profiletext h3:nth-of-type(2){
+    margin-bottom: 20px;
+  }
+  .profiletext h3 span{
+    color: lightskyblue;
+  }
+
+  .profiletext h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+  }
+  .profiletext p {
+    font-size: 16px;
+  }
+  .myself{
+    display: flex;
+    display: flex; gap: 20px;
+  }
+  #social-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  
+  /* ICONS */
+  
+.icon {
+    cursor: pointer;
+    height: 2rem;
+  }
+/*music*/
+.music{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.musicbutton{
+    font-weight: 600;
+    transition: all 300ms ease;
+    margin-top: 0.3rem;
+    padding: 0.5rem;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    background: rgb(53, 53, 53);
+    color: white;
+}
+.musicbutton:hover{
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+}
+
+/*animation*/
+@keyframes slideBottom{
+  0%{
+      transform: translateY(100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+/*Hashtag*/
+#Hashtag {
+  padding: 20px;
+  background-color: white;
+  display: grid;
+  justify-content: center;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  width: 1340px;
+  margin-top: 5%;
+  margin-bottom:1%;
+  background-color: rgb(227, 223, 223);
+}
+.hashblock{
+  display: flex; 
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+.block{
+  width: 400px;
+  height: 650px;
+  background-color: #d3e3f4;
+  display: grid;
+  justify-items: center;  /* 水平置中 */
+  align-items: start;
+  gap: 0px;               /* ✅ 元素之間距離縮短 (原本0可改4px更自然) */
+  padding: 10px;          /* 內距讓內容不貼邊 */
+  border-radius: 12px;    /* 可選：讓整體更柔和 */
+}
+.block h2{
+  font-size: 1.7rem;
+  margin-top: 2px;
+  margin-bottom: -10px;
+}
+.block img{
+  width: 360px;
+  height: 360px;
+}
+.block h3{
+  font-size: 1.7rem;
+  margin-bottom:2px;
+}
+/*Exp*/
+#Experience {
+  padding: 20px;
+  background-color: white;
+  display: grid;
+  justify-content: center;
+}
+.exti{
+  font-size: 3rem;
+  text-align: center;
+  width: 1340px;
+  height: 55.2px;
+  margin-top: 5%;
+  margin-bottom:1%;
+  background-color: rgb(245, 235, 180);
+}
+.expcontainer {
+  display: flex; 
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.timeline {
+  max-width: 600px;
+  margin-right: -25%; 
+  margin-left: 100px;
+  flex: 1; 
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 6px;
+  margin: 30px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background-color: #3498db;
+  top: 0;
+  left: 20px;
+}
+
+.timeline-item h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.timeline-item p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.timeline-content {
+  padding-left: 40px;
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #3498db;
+  top: 10px;
+  left: 0;
+}
+
+.schoolpics {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.schoolpic {
+  margin-bottom: 20px;
+}
+
+.schoolpic img {
+  width: 80px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*ability*/
+#ability {
+  padding: 20px;
+  background-color: #e5edf5;
+  height: 100%;
+}
+.title2{
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 50px;
+}
+.ab .abilitybox{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ab .abilitybox h4{
+  text-transform: uppercase;
+  color: #9f71b3;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.abilitybox .bar{
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #c3bdbd;
+}
+.abilitybox .bar div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #9f71b3;
+}
+/*vacation*/
+.places {
+  margin-top: 50px;
+  text-align: center;
+}
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.placebox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.place {
+  flex-basis: 30%; 
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.place img {
+  width: 100%;
+  height: auto;
+  max-width: 250px; 
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.place p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/*interest*/
+#interest {
+  padding: 20px;
+  background-color: #f3f184;
+}
+.title3{
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 50px;
+}
+.interestbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.intpic {
+  flex-basis: 30%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intpic img {
+  width: 100%;
+  height: 80%;
+  max-width: 250px; 
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.intpic p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
