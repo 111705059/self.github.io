@@ -226,27 +226,50 @@ section {
   width: 1340px;
   height: 55.2px;
   margin-top: 5%;
-  margin-bottom:1%;
   background-color: rgb(245, 235, 180);
+  margin-bottom:1%;
 }
 .expcontainer {
   display: flex; 
-  justify-content: space-between;
   align-items: flex-start;
+  justify-content: center;
+  background-color:rgb(118, 194, 197);
+}
+.schoolpics {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
+  width: 150px;
+  margin-right: 0px;
+  margin-left: 60px;
+}
+
+.schoolpic {
+  margin-bottom: 20px;
+  width: 150px;
+}
+
+.schoolpic img {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .timeline {
   max-width: 600px;
-  margin-right: -25%; 
-  margin-left: 100px;
-  flex: 1; 
+  margin-top: 35px;
+  margin-left: 50px;
 }
 
 .timeline-item {
   padding: 10px 40px;
+  height: 80px;
+  width: 700px;
   position: relative;
   background-color: #ffffff;
   border-radius: 6px;
-  margin: 30px 30px;
+  margin: 25px 25px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -261,12 +284,12 @@ section {
 }
 
 .timeline-item h3 {
-  font-size: 20px;
+  font-size: 36px;
   margin: 0;
 }
 
 .timeline-item p {
-  font-size: 18px;
+  font-size: 22px;
   margin: 5px 0;
 }
 
@@ -285,74 +308,57 @@ section {
   top: 10px;
   left: 0;
 }
-
-.schoolpics {
-  flex: 1; 
+/*interest*/
+#interest {
+  padding: 20px;
+  background-color: white;
+  display: grid;
+  justify-content: center;
+}
+.title3{
+  font-size: 3rem;
+  text-align: center;
+  width: 1340px;
+  height: 55.2px;
+  margin-top: 5%;
+  background-color: rgb(177, 203, 254);
+  margin-bottom:1%;
+}
+.interestbox {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 25px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #ef94db;
+  width: 1340px;
 }
-
-.schoolpic {
+.intpic {
+  margin-top: 30px;
+  flex-basis: 50%;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.schoolpic img {
-  width: 80px;
-  height: auto;
+.intpic img {
+  width: 100%;
+  height: 80%;
+  max-width: 250px; 
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+.intpic p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
 
-/*ability*/
-#ability {
-  padding: 20px;
-  background-color: #e5edf5;
-  height: 100%;
-}
-.title2{
-  font-size: 3rem;
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 50px;
-}
-.ab .abilitybox{
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.ab .abilitybox h4{
-  text-transform: uppercase;
-  color: #9f71b3;
-  font-weight: 500;
-  font-size: 1.5rem;
-}
-.abilitybox .bar{
-  position: relative;
-  width: 100%;
-  height: 10px;
-  background: #c3bdbd;
-}
-.abilitybox .bar div{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: #9f71b3;
-}
 /*vacation*/
 .places {
-  margin-top: 50px;
   text-align: center;
+  background-color: #e6b6dc;
 }
 .subtitle {
   font-size: 1.5rem;
   margin-bottom: 30px;
+  padding-top: 30px;
 }
 
 .placebox {
@@ -380,36 +386,9 @@ section {
   font-size: 1.2rem;
 }
 
-/*interest*/
-#interest {
-  padding: 20px;
-  background-color: #f3f184;
-}
-.title3{
-  font-size: 3rem;
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 50px;
-}
-.interestbox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.intpic {
-  flex-basis: 30%;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.intpic img {
-  width: 100%;
-  height: 80%;
-  max-width: 250px; 
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.intpic p {
-  margin-top: 10px;
-  font-size: 1.2rem;
+@media (max-width: 768px) {
+  html, body {
+    width: 1280px;  /* 或你的桌機排版寬度 */
+    overflow-x: auto;
+  }
 }
